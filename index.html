@@ -3,13 +3,28 @@
     <head></head>
     <body>
         <div id= "container"></div>
-    </body>
-
+   
     <script> 
         const container = document.querySelector('#container');
         const content = document.createElement('div');
         content.classList.add('content');
         content.style.cssText='display: grid; grid-template-columns: repeat(16,50px); grid-template-rows: repeat(16,50px);';
+        
+        const item = document.createElement('div');
+        item.setAttribute('id','item1');
+        
+        content.appendChild(item);
+
         container.appendChild(content);
+
+        document.getElementById("item1").addEventListener("mouseover",mouseOver);
+        function mouseOver(){
+            document.getElementById("item1").style.backgroundColor = "red";            
+            
+        }
+
+       
     </script>
+     </body>
+
 </html>
