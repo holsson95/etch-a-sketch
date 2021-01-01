@@ -10,18 +10,32 @@
         content.classList.add('content');
         content.style.cssText='display: grid; grid-template-columns: repeat(16,50px); grid-template-rows: repeat(16,50px);';
         
-        const item = document.createElement('div');
-        item.setAttribute('id','item1');
-        
-        content.appendChild(item);
+        for (i=0;i<16*16;i+=1){
+        const gridDiv = document.createElement('div');
+        gridDiv.classList.add('item');
+        gridDiv.textContent ="hi";
+        content.appendChild(gridDiv);
+        }
 
         container.appendChild(content);
 
-        document.getElementById("item1").addEventListener("mouseover",mouseOver);
-        function mouseOver(){
-            document.getElementById("item1").style.backgroundColor = "red";            
+        let items = document.querySelectorAll('.item');
+
+        document.querySelectorAll('.item').forEach(function(items){
+            items.addEventListener("mouseover",mouseOver);
+            function mouseOver(){
+                items.style.backgroundColor = "red";
+            }
+
+        })
+
+       
+
+       // document.getElements("item1").addEventListener("mouseover",mouseOver);
+        //function mouseOver(){
+          //  document.getElementById("item1").style.backgroundColor = "red";            
             
-        }
+        //}
 
        
     </script>
