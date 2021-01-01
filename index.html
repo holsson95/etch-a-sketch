@@ -8,7 +8,9 @@
         const container = document.querySelector('#container');
         const content = document.createElement('div');
         content.classList.add('content');
-        content.style.cssText='display: grid; grid-template-columns: repeat(16,50px); grid-template-rows: repeat(16,50px);';
+        content.style.cssText='padding: 50px; justify-content:center; display: grid; grid-template-columns: repeat(16,50px); grid-template-rows: repeat(16,50px);';
+        content.style.border='solid;'
+    
         
         for (i=0;i<16*16;i+=1){
         const gridDiv = document.createElement('div');
@@ -24,10 +26,11 @@
         document.querySelectorAll('.item').forEach(function(items){
             items.addEventListener("mouseover",mouseOver);
             function mouseOver(){
-                items.style.backgroundColor = "red";
+                items.style.backgroundColor = "blue";
             }
 
         })
+         
 
        
 
