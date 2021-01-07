@@ -1,14 +1,83 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">  
+    </head>
     <body>
-        <div id= "container">
-            <button id="changeContainer">New Grid</button>
+        <h1>Etch a Sketch</h1>
+        
+        <div id="container">
+            <div class = "buttons">
+                <button id="reset">Reset</button>
+                <button id="changeContainer">New Grid</button>
+                <button id="changeColor">Change Color</button>
+            </div>
         </div>
 
         <style>
+             body{
+                background-color: blueviolet; 
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: auto;
+            }
+
+            .buttons{
+                display: flex;
+                flex-direction: row;
+                width: 700px;
+                height: 50px;
+                justify-content: space-evenly;
+                padding: 10px;
+                margin-left: 20px;                 
+            }
+            #reset{
+                background-color: aliceblue; 
+                width: 100px;
+                font-family:"Press Start 2P";
+            }
+            #changeContainer{
+                background-color: aliceblue; 
+                width: 100px;
+                font-family:"Press Start 2P";
+
+            }
+            #changeColor{
+                background-color: aliceblue; 
+                width: 100px;
+                font-family:"Press Start 2P";
+            }
+           
+            h1 {
+                font-family: "Press Start 2P",cursive;
+                text-align: center;
+                padding: 20px;
+                margin-left: 90px;
+                
+                
+            }
+            #container{ 
+                text-align: center; 
+                
+                
+            }
+            #changeContainer{
+                float: left;
+            }
+            #content{
+                background-color: white; 
+            }
+
+
+
 
         </style>
+
+
+
+    
 
        
         
