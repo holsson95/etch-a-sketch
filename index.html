@@ -70,17 +70,8 @@
                 background-color: white; 
             }
 
-
-
-
         </style>
-
-
-
     
-
-       
-        
    
     <script> 
         const container = document.querySelector('#container');
@@ -91,10 +82,20 @@
         content.style.cssText='justify-content:center; display: inline-grid; height: 600px; width: 600px; border: solid; ';
         
         
-        
+        const reset = document.querySelector('#reset');
         let items = document.querySelectorAll('.item');
-        
-        
+
+        reset.addEventListener('click',resetGrid);
+        function resetGrid(e){
+            //reset the grid
+            let gridItems = document.querySelectorAll('.item');
+            gridItems.forEach((item)=>{
+                item.style.backgroundColor = 'white';
+            })
+            
+        }
+
+ 
     
         function start(size){
             content.style.gridTemplateColumns ='repeat('+size+',2fr)';
@@ -138,6 +139,8 @@
                 start(size);
             }
         }
+
+        
                   
     </script>
      </body>
