@@ -11,9 +11,13 @@
             <div class = "buttons">
                 <button id="reset">Reset</button>
                 <button id="changeContainer">New Grid</button>
-                <button id="changeColor">Change Color</button>
+                <button id="black">Black</button>
+               
+                
             </div>
+             
         </div>
+        
 
         <style>
              body{
@@ -84,10 +88,11 @@
         
         const reset = document.querySelector('#reset');
         let items = document.querySelectorAll('.item');
-
+        
+        
+        //Reset the Grid
         reset.addEventListener('click',resetGrid);
         function resetGrid(e){
-            //reset the grid
             let gridItems = document.querySelectorAll('.item');
             gridItems.forEach((item)=>{
                 item.style.backgroundColor = 'white';
@@ -95,8 +100,6 @@
             
         }
 
- 
-    
         function start(size){
             content.style.gridTemplateColumns ='repeat('+size+',2fr)';
             content.style.gridTemplateRows ='repeat('+size+',2fr)';
@@ -108,7 +111,6 @@
                     content.appendChild(gridDiv);
                 }
             container.appendChild(content);
-            //draw
             document.querySelectorAll('.item').forEach(function(items){
             items.addEventListener("mouseover",mouseOver);
             function mouseOver(){
@@ -116,9 +118,16 @@
             }
 
         });
+            
         }
-        //default
+        
+
+        //default grid
         start(16,16);
+
+      
+        
+        
 
         changeContainer.addEventListener("click", newGrid);
 
@@ -133,12 +142,14 @@
             }
             if (size>100){
                 alert("Error: Too Big");
-                start (16,16);
+                start (16);
             }
             else{
                 start(size);
             }
         }
+
+        
 
         
                   
